@@ -5,10 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return send_file(askopenfilename(),'r')
+    return 'hello world'
 
 @app.route('/file')
 def file():
+    open('ff.txt','w').write('Hello')
     return send_file('requirements.txt')
 
 if __name__=='__main__':
